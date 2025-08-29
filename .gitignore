@@ -1,0 +1,81 @@
+# Ingnore cache/data/env files
+
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+*.log
+
+# ======================
+# Virtual Environments
+# ======================
+.venv/
+venv/
+env/
+.conda/
+.venv*/
+*.env
+
+# ======================
+# Jupyter Notebooks
+# ======================
+.ipynb_checkpoints
+
+# ======================
+# Data
+# ======================
+data/raw/
+data/processed/
+*.csv
+*.json
+*.xlsx
+*.db
+
+# ======================
+# Configs & Secrets
+# ======================
+*.yaml
+*.yml
+*.ini
+*.cfg
+*.toml
+*.env
+configs/*.yaml   # <-- If you want to keep configs local only
+
+# ======================
+# Models / Checkpoints
+# ======================
+*.pt
+*.pth
+*.h5
+*.ckpt
+*.bin
+*.onnx
+sentence-transformers/
+transformers_cache/
+huggingface/
+
+# ======================
+# OS Files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE / Editors
+# ======================
+.vscode/
+.idea/
+*.iml
+
+# ======================
+# Streamlit / Dash Caches
+# ======================
+.streamlit/
+dash/__pycache__/
