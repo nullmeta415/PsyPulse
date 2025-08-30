@@ -38,7 +38,7 @@ def run_sentiment_analysis(device):
 
     # Load pre-trained sentiment analysis pipeline
     sentiment_model = pipeline("sentiment-analysis", device=device)
-    # model_details(sentiment_model)    # to get the details about the model used
+    model_details(sentiment_model)    # to get the details about the model used
 
     # Example inputs
     texts = [
