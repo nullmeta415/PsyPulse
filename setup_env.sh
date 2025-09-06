@@ -11,25 +11,27 @@ elif [[ "$1" == "--gpu" ]]; then
     INSTALL_MODE="gpu"
 fi
 
-# Step 1: Check Python 3.12
-if ! command -v python3.12 &> /dev/null
+# Step 1: Check Python 3.11
+if ! command -v python3.11 &> /dev/null
 then
-    echo "[ERROR] Python 3.12 not found. Please install Python 3.12."
+    echo "[ERROR] Python 3.11 not found. Please install Python 3.11."
     exit 1
 fi
 
 # Step 2: Create virtual environment if not exists
 if [ ! -d ".venv" ]; then
     echo "Creating virtual environment (.venv)..."
-    python3.12 -m venv .venv
+    python3.11 -m venv .venv
 else
     echo "Virtual environment already exists."
 fi
 
 # Step 3: Activate virtual environment
+echo "Activating virtual environment (.venv)..."
 source .venv/bin/activate
 
 # Step 4: Upgrade pip
+echo "Upgrading pip..."
 python -m pip install --upgrade pip
 
 # Step 5: Install PyTorch (CPU/GPU/auto)
